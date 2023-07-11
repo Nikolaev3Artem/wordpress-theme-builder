@@ -8,10 +8,17 @@ export const path = {
     theme_name:`${theme_name}`, 
     build: {
         files: `../${theme_name}`,
+        assets: `assets`,
+        css: `css`,
+        js:`js`,
+        images: `img`
     },
     src: {
         files: `../${theme_name}/${srcFolder}`,
-        assets: `assets`
+        assets: `assets`,
+        css: `css`,
+        js:`js`,
+        images: `img`
     },
     watch: {},
     clean: theme_name,

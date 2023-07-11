@@ -10,10 +10,15 @@ global.app = {
     gulp: gulp,
 }
 
-// імпорт задач
-import { build } from "./gulp/tasks/build.js"
+// імпорт завдань
 import { template } from "./gulp/tasks/template.js";
+import { css } from "./gulp/tasks/build/css.js"
+import { images } from "./gulp/tasks/build/images.js"
+import { js } from "./gulp/tasks/build/javascript.js"
 
-// виконання сценарію по замовченню
-gulp.task('build', build);
+// команди для завдань
 gulp.task('template', template)
+gulp.task('build', gulp.series(css,images,js))
+gulp.task('build:css', css)
+gulp.task('build:images', images)
+gulp.task('build:js', js)
