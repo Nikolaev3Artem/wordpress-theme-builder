@@ -1,23 +1,22 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./prod`;
-const srcFolder = `./HTML`;
+const srcFolder = `./!HTML`;
+const theme_name = 'Theme-Name';
 
 export const path = {
-    theme_name:'Theme-Name', 
+    theme_name:`${theme_name}`, 
     build: {
-        files: `${buildFolder}`,
+        files: `../${theme_name}`,
     },
     src: {
-        folder: `${srcFolder}`,
+        files: `../${theme_name}/${srcFolder}`,
         assets: `assets`
     },
     watch: {},
-    clean: buildFolder,
-    buildFolder: buildFolder,
+    clean: theme_name,
+    buildFolder: theme_name,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
     ftp: ``
-
 }

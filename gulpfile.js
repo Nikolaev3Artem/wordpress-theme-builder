@@ -11,9 +11,9 @@ global.app = {
 }
 
 // імпорт задач
-import { copy } from "./gulp/tasks/copy.js"
+import { build } from "./gulp/tasks/build.js"
 import { template } from "./gulp/tasks/template.js";
 
 // виконання сценарію по замовченню
-gulp.task('default', copy);
+gulp.task('build', build);
 gulp.task('template', template)
