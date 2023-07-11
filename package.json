@@ -10,10 +10,8 @@
   "author": "ItzMaze",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
-    "gulp": "^4.0.2"
-  },
-  "devDependencies": {
-    
+    "gulp-shell": "^0.8.0"
   }
 }
