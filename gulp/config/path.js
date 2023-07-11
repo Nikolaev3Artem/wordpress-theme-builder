@@ -5,12 +5,13 @@ const buildFolder = `./prod`;
 const srcFolder = `./HTML`;
 
 export const path = {
+    theme_name:'Theme-Name', 
     build: {
-        files: `${buildFolder}/`,
+        files: `${buildFolder}`,
     },
     src: {
         folder: `${srcFolder}`,
-        assets: `assets/`
+        assets: `assets`
     },
     watch: {},
     clean: buildFolder,
