@@ -6,7 +6,7 @@ const buildFolder = '../'
 
 export const path = {
     build: {
-        files: buildFolder,
+        files: `${buildFolder}/assets`,
         assets: `assets`,
         css: `css`,
         js:`js`,
