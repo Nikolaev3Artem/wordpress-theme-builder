@@ -6,14 +6,14 @@ const buildFolder = '../'
 
 export const path = {
     build: {
-        files: `../`,
+        files: `${buildFolder}/assets`,
         assets: `assets`,
         css: `css`,
         js:`js`,
         images: `img`
     },
     src: {
-        files: `../${srcFolder}`,
+        files: srcFolder,
         assets: `assets`,
         css: `css`,
         js:`js`,
