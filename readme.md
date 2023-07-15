@@ -20,6 +20,7 @@ Here you go! You can use my own gulp project
 
 Working commands: <br>
 - <code>gulp template - it creates standart theme structure for your theme(HTML folder and Prod folder), you can customize it in gulp/tasks/template.js and gulp/config/path.js</code>
+- <code>gulp clean - Removing prod folder </code>
 - <code>gulp build - Copying all files from dev assets folder to prod assets folder </code>
 - <code>gulp build:css - Copying all css from dev assets folder to prod assets folder </code>
 - <code>gulp build:js - Copying all js from dev assets folder to prod assets folder </code>

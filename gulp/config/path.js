@@ -1,8 +1,8 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const srcFolder = `./!HTML`;
-const theme_name = 'Theme-Name';
+const srcFolder = `../!HTML`;
+const buildFolder = '../'
 
 export const path = {
     build: {
@@ -20,8 +20,8 @@ export const path = {
         images: `img`
     },
     watch: {},
-    clean: theme_name,
-    buildFolder: theme_name,
+    clean: buildFolder,
+    buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,
     ftp: ``
