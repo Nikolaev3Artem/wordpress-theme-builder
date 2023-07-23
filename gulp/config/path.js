@@ -19,7 +19,9 @@ export const path = {
         js:`js`,
         images: `img`
     },
-    watch: {},
+    watch: {
+        files:`${srcFolder}/assets/**`
+    },
     clean: buildFolder,
     buildFolder: buildFolder,
     srcFolder: srcFolder,
