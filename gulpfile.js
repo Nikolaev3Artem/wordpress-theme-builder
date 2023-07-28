@@ -19,12 +19,12 @@ import { js } from "./gulp/tasks/build/javascript.js"
 import { copy } from "./gulp/tasks/build.js"
 
 function watcher() {
-    gulp.watch('../!HTML/assets/**', copy)
+    gulp.watch('../!HTML/assets/**', copy, css)
 }
 
 const build = gulp.series(reset,copy,css)
 
-const dev = gulp.series(reset, copy, watcher)
+const dev = gulp.series(build, watcher)
 
 // команди для завдань
 gulp.task('template', template)
