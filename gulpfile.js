@@ -16,19 +16,21 @@ import { reset } from "./gulp/tasks/reset.js"
 import { css } from "./gulp/tasks/build/css.js"
 import { images } from "./gulp/tasks/build/images.js"
 import { js } from "./gulp/tasks/build/javascript.js"
-import { build } from "./gulp/tasks/build.js"
+import { copy } from "./gulp/tasks/build.js"
 
 function watcher() {
-    gulp.watch('../!HTML/assets/**', build)
+    gulp.watch('../!HTML/assets/**', copy)
 }
 
-const dev = gulp.series(reset, build, watcher)
+const build = gulp.series(reset,copy,css)
+
+const dev = gulp.series(reset, copy, watcher)
 
 // команди для завдань
 gulp.task('template', template)
 gulp.task('clean',reset)
-gulp.task('build', gulp.series(reset,build))
-gulp.task('watch', dev)
+gulp.task('build', build)
+gulp.task('dev', dev)
 gulp.task('build:css', css)
 gulp.task('build:images', images)
 gulp.task('build:js', js)
