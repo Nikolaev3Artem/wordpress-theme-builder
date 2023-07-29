@@ -14,16 +14,15 @@ global.app = {
 import { template } from "./gulp/tasks/template.js";
 import { reset } from "./gulp/tasks/reset.js"
 import { css } from "./gulp/tasks/build/css.js"
-import { stylelint } from "./gulp/tasks/build/stylelint-formater.js"
 import { images } from "./gulp/tasks/build/images.js"
 import { js } from "./gulp/tasks/build/javascript.js"
 import { copy } from "./gulp/tasks/build.js"
 
-function watcher() {
-    gulp.watch('../!HTML/assets/**', copy, css)
-}
-
 const build = gulp.series(reset,copy,css)
+
+function watcher() {
+    gulp.watch('../!HTML/assets/**', build)
+}
 
 const dev = gulp.series(build, watcher)
 
@@ -35,6 +34,3 @@ gulp.task('dev', dev)
 gulp.task('build:css', css)
 gulp.task('build:images', images)
 gulp.task('build:js', js)
-gulp.task('build:stylelint', stylelint)
-
-

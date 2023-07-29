@@ -13,8 +13,6 @@
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-stylelint": "^13.0.0",
-    "stylelint-order": "^6.0.3"
+    "gulp-minify-css": "^1.2.4"
   }
 }
